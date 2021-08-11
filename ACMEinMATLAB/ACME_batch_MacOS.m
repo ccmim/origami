@@ -9,7 +9,7 @@
 % Input: folder directory to multiple '.mha' files for ACME. 
 % Output: '.mha' segmented results and intermediate results from ACME. 
 %
-% =========================================================================/Users/Tania/Google Drive (taniaviola.m@gmail.com)/Work/2017-18_PostDoc1_FrangiWhitfield/Papers/Cell_Shape/Scripts/Origami/ACME/ACME_batch_MacOS.m
+% =========================================================================
 
 
 % Set MATLAB path to directory with ACME binaries
