@@ -15,7 +15,7 @@ Origami requires the ‘Computer Vision System Toolbox’ and ‘Deep Learning T
 
 
 ### Usage
-Origami is an easy- to- use MATLAB program with interactive features. *It does not require knowledge of MATLAB scripting to run*. Simply add the folder directory for the Origami scripts to the MATLAB search path. Open the main script [‘OrigamiPipeline_Main.m’](https://github.com/tvmendonca/origami/blob/initial/Src/Main/OrigamiPipeline_Main.m) in MATLAB and click on the RUN button.
+Origami is an easy- to- use MATLAB program with interactive features. *It does not require knowledge of MATLAB scripting to run*. Simply add the folder directory for the Origami scripts to the MATLAB search path. Open the main script ‘OrigamiPipeline_Main.m’ in MATLAB and click on the RUN button.
 
 #### Inputs:
 * Segmented files – Origami accepts 3D segmented image data in the following file formats: ‘.mha’ , ’.tif’ , ’.obj’  and  ‘.mat’. Origami has been validated on data that represent cropped ROIs.
@@ -44,15 +44,15 @@ The data table can be exported as a ‘.csv’ or ‘.xlsx’ file.
  Cells along the boundary are removed to exclude broken cells from the analysis.
 
 #### Additional functionality: 
-[‘SelectACell.m’](https://github.com/tvmendonca/origami/blob/initial/Src/Main/SelectACell.m) and [‘PlotCellsByProperty.m’](https://github.com/tvmendonca/origami/blob/initial/Src/Main/PlotCellsByProperty.m) are additional scripts that can be used to visualise the data by features at a single-cell level. The GUIs for these scripts allow the user to interact with 3D renderings of the epithelium and export 2D images or data tables.
+‘SelectACell.m’ and ‘PlotCellsByProperty.m’ are additional scripts that can be used to visualise the data by features at a single-cell level. The GUIs for these scripts allow the user to interact with 3D renderings of the epithelium and export 2D images or data tables.
 
 ## Generating synthetic epithelia
-Synthetic epithelia used to validate Origami can be generated using the [‘MembraneSim.m’](https://github.com/tvmendonca/origami/blob/initial/SyntheticData/MembraneSim.m) and [‘ConvolveNCorrupt.m’](https://github.com/tvmendonca/origami/blob/initial/SyntheticData/ConvolveNCorrupt.m) scripts. These synthetic data resemble fluorescence images of folding epithelia with parameters to control extent of membrane curvature (‘crv’ line 25, ‘MembraneSim.m’) and folding height (‘pk’ line 26, ‘MembraneSim.m’). The ‘MembraneSim.m’ script produces a 3D array of pixel intensity values saved as a ‘.mat’ file. This synthetic image array is then convolved with a point spread function (‘PSF Defocus.tif’) and corrupted with image noise (three levels) to resemble real-world imaging conditions using the ‘CovolveNCorrupt.m’ script. Finally, a ‘.tiff’ image file is exported from the ‘ConvolveNCorrupt.m’ script. Please refer to the [Supplementary Materials and Methods](https://www.biorxiv.org/content/10.1101/2021.05.13.443974v1.full) for a detailed explanation of the synthetic data generation.
+Synthetic epithelia used to validate Origami can be generated using the ‘MembraneSim.m’ and ‘ConvolveNCorrupt.m’ scripts. These synthetic data resemble fluorescence images of folding epithelia with parameters to control extent of membrane curvature (‘crv’ line 25, ‘MembraneSim.m’) and folding height (‘pk’ line 26, ‘MembraneSim.m’). The ‘MembraneSim.m’ script produces a 3D array of pixel intensity values saved as a ‘.mat’ file. This synthetic image array is then convolved with a point spread function (‘PSF Defocus.tif’) and corrupted with image noise (three levels) to resemble real-world imaging conditions using the ‘CovolveNCorrupt.m’ script. Finally, a ‘.tiff’ image file is exported from the ‘ConvolveNCorrupt.m’ script. Please refer to the [Supplementary Materials and Methods](https://www.biorxiv.org/content/10.1101/2021.05.13.443974v1.full) for a detailed explanation of the synthetic data generation.
 
 The synthetic images must be segmented prior to applying the Origami pipeline. We use the ACME software to do this.
-Download ACME binaries from https://wiki.med.harvard.edu/SysBio/Megason/ACME. 
+Download ACME binaries from https://github.com/krm15/ACME/wiki. 
 
-The [‘ACMEinMATLAB’](https://github.com/tvmendonca/origami/tree/initial/ACMEinMATLAB) folder contains scripts produced by us to call ACME binaries from within MATLAB for single file or batch processing.
+The ‘ACMEinMATLAB’ folder contains scripts produced by us to call ACME binaries from within MATLAB for single file or batch processing.
 
 ## Citing this work
 If you use our work, please cite it:
