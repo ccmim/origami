@@ -118,7 +118,16 @@ fv.Properties.VariableNames = {'BoundaryFacets'};
 
 A = [props,fv];
 waitbar(0.9,wb,'Generating Table');
-T = resulttable(A, info);
+
+if isfield(info,'PixelDimensions')
+    PxlDim = [info.PixelDimensions(1);
+        info.PixelDimensions(2);
+        info.PixelDimensions(3)];
+    T = resulttable(A,PxlDim);
+else
+    T = resulttable(A);
+end
+                
 waitbar(1.0,wb,'Complete'); close(wb);
 imshow3Dfull(img, [0 length(props.VoxelList)]);
 pause(0.5);

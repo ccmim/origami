@@ -1,6 +1,6 @@
 <img align="left" width="300" height="300" src=Img/SelectCells.png>
 
-# Origami
+# Origami  [![DOI:10.1371/journal.pcbi.1009063](http://img.shields.io/badge/DOI-10.1371/journal.pcbi.1009063-B31B1B.svg)](https://doi.org/10.1371/journal.pcbi.1009063)
 An image analysis pipeline for extracting direction- variant shape features from fluorescence images of folding epithelial sheets.
 
 ### Overview
@@ -47,14 +47,14 @@ The data table can be exported as a ‘.csv’ or ‘.xlsx’ file.
 ‘SelectACell.m’ and ‘PlotCellsByProperty.m’ are additional scripts that can be used to visualise the data by features at a single-cell level. The GUIs for these scripts allow the user to interact with 3D renderings of the epithelium and export 2D images or data tables.
 
 ## Generating synthetic epithelia
-Synthetic epithelia used to validate Origami can be generated using the ‘MembraneSim.m’ and ‘ConvolveNCorrupt.m’ scripts. These synthetic data resemble fluorescence images of folding epithelia with parameters to control extent of membrane curvature (‘crv’ line 25, ‘MembraneSim.m’) and folding height (‘pk’ line 26, ‘MembraneSim.m’). The ‘MembraneSim.m’ script produces a 3D array of pixel intensity values saved as a ‘.mat’ file. This synthetic image array is then convolved with a point spread function (‘PSF Defocus.tif’) and corrupted with image noise (three levels) to resemble real-world imaging conditions using the ‘CovolveNCorrupt.m’ script. Finally, a ‘.tiff’ image file is exported from the ‘ConvolveNCorrupt.m’ script. Please refer to the [Supplementary Materials and Methods](https://www.biorxiv.org/content/10.1101/2021.05.13.443974v1.full) for a detailed explanation of the synthetic data generation.
+Synthetic epithelia used to validate Origami can be generated using the ‘MembraneSim.m’ and ‘ConvolveNCorrupt.m’ scripts. These synthetic data resemble fluorescence images of folding epithelia with parameters to control extent of membrane curvature (‘crv’ line 25, ‘MembraneSim.m’) and folding height (‘pk’ line 26, ‘MembraneSim.m’). The ‘MembraneSim.m’ script produces a 3D array of pixel intensity values saved as a ‘.mat’ file. This synthetic image array is then convolved with a point spread function (‘PSF Defocus.tif’) and corrupted with image noise (three levels) to resemble real-world imaging conditions using the ‘CovolveNCorrupt.m’ script. Finally, a ‘.tiff’ image file is exported from the ‘ConvolveNCorrupt.m’ script. Please refer to the [Supplementary Materials and Methods](https://doi.org/10.1371/journal.pcbi.1009063) for a detailed explanation of the synthetic data generation.
 
 The synthetic images must be segmented prior to applying the Origami pipeline. We use the ACME software to do this.
-Download ACME binaries from https://github.com/krm15/ACME/wiki. 
+Download ACME binaries from (https://github.com/krm15/ACME/wiki).
 
 The ‘ACMEinMATLAB’ folder contains scripts produced by us to call ACME binaries from within MATLAB for single file or batch processing.
 
 ## Citing this work
 If you use our work, please cite it:
 
->Mendonca T, Jones AA, Pozo JM, Baxendale S, Whitfield TT, Frangi AF. *Origami: Single-cell oriented 3D shape dynamics of folding epithelia from fluorescence microscopy images*. bioRxiv. 2021; 2021.05.13.443974. [doi:10.1101/2021.05.13.443974](https://www.biorxiv.org/content/10.1101/2021.05.13.443974v1.full)
+>Mendonca T, Jones AA, Pozo JM, Baxendale S, Whitfield TT, Frangi AF. *Origami: Single-cell 3D shape dynamics oriented along the apico-basal axis of folding epithelia from fluorescence microscopy data*. PLOS Computational Biology. 2021; 17 (11) [doi:10.1101/2021.05.13.443974](https://doi.org/10.1371/journal.pcbi.1009063)
